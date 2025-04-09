@@ -196,14 +196,12 @@ const styles = StyleSheet.create({
     		textAlign: "center"
   	},
   	content: {
-    		marginTop: -188.5,
-    		marginLeft: -187.5,
     		paddingHorizontal: 24,
     		gap: 24,
     		paddingVertical: 0,
     		top: "50%",
     		alignItems: "center",
-    		left: "50%",
+    		justifyContent: "center",
     		position: "absolute"
   	},
   	arApp: {

@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Image, StyleSheet, Text, View} from "react-native";
+import {Image, StyleSheet, Text, View, ScrollView} from "react-native";
 
 import Star from "../../assets/star.svg"
 import Dress from "../../assets/dress.svg"
@@ -16,7 +16,7 @@ import dot from "../../assets/dot.svg"
 
 const HighFidelityHome = () => {
   	return (
-    		<View style={styles.highFidelityHome}>
+    		<ScrollView style={styles.highFidelityHome}>
       			<View style={styles.product4}>
         				<Image style={[styles.imageIcon, styles.imageIconLayout]} width={155} height={251} source={require("../../assets/image3.png")} />
         				<View style={styles.text}>
@@ -127,7 +127,7 @@ const HighFidelityHome = () => {
         				<Favorite width={40} height={40} />
         				<Account width={40} height={40} />*/}
       			</View>
-    		</View>);
+    		</ScrollView>);
 };
 
 const styles = StyleSheet.create({
