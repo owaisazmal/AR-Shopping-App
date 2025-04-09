@@ -1,15 +1,16 @@
 import * as React from "react";
 import {Image, StyleSheet, View, Text} from "react-native";
-import Heart from "../../assets/Favorite.svg"
-import Review from "../../assets/star.svg"
-import GoBack from "../../assets/backArrow.svg"
+import Heart from "../assets/Favorite.svg"
+import Review from "../assets/star.svg"
+import GoBack from "../assets/backArrow.svg"
+import Navbar from "./components/Navbar";
 
 const HighFidelityDetail = () => {
   	return (
     		<View style={styles.highFidelityDetail}>
       			<View style={[styles.imagePreview, styles.imagePreviewPosition]}>
         				<View style={styles.imagePreview1}>
-          					<Image style={[styles.product2Icon, styles.imagePreviewPosition]} resizeMode="cover" source= {require("../../assets/product2.jpg")} />
+          					<Image style={[styles.product2Icon, styles.imagePreviewPosition]} resizeMode="cover" source= {require("../assets/product2.jpg")} />
           					<View style={[styles.back, styles.backShadowBox]}>
             						<GoBack style={styles.iconLayout} />
           					</View>
@@ -36,6 +37,7 @@ const HighFidelityDetail = () => {
           					<View style={styles.childShadowBox} />
           					<Text style={[styles.visitProduct, styles.tryOnInTypo]}>VISIT PRODUCT</Text>
         				</View>
+						<Navbar/>
       			</View>
     		</View>);
 };

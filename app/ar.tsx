@@ -1,6 +1,6 @@
 import * as React from "react";
 import {StyleSheet, View, Text, Image} from "react-native";
-import Ellipse1 from "../../assets/Ellipse.svg"
+import Ellipse1 from "../assets/Ellipse.svg"
 
 const Checkout = () => {
   	
