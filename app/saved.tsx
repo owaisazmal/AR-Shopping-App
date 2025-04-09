@@ -1,7 +1,8 @@
 import * as React from "react";
 import {Image, StyleSheet, View, Text} from "react-native";
-import GoBack from "../../assets/backArrow.svg"
-import Sort from "../../assets/sort.svg"
+import GoBack from "../assets/backArrow.svg"
+import Sort from "../assets/sort.svg"
+import Navbar from "./components/navbar";
 
 const HighFidelityChekout = () => {
   	
@@ -19,7 +20,7 @@ const HighFidelityChekout = () => {
         				</View>
         				<View style={[styles.stripe, styles.stripeLayout]} />
         				<View style={[styles.cart2, styles.cartPosition]}>
-          					<Image style={styles.productLayout} resizeMode="cover" source={require("../../assets/image1.png")} />
+          					<Image style={styles.productLayout} resizeMode="cover" source={require("../assets/image1.png")} />
           					<View style={styles.detailFlexBox}>
             						<View style={styles.detail1}>
               							<View style={styles.headline}>
@@ -33,7 +34,7 @@ const HighFidelityChekout = () => {
         				<View style={[styles.stripe1, styles.stripeLayout]} />
         				<View style={[styles.cart1, styles.cartPosition]}>
           					<View style={[styles.productCart, styles.productLayout]}>
-            						<Image style={styles.productCartIcon1} resizeMode="cover" source={require("../../assets/image2.png")} />
+            						<Image style={styles.productCartIcon1} resizeMode="cover" source={require("../assets/image2.png")} />
           					</View>
           					<View style={styles.detailFlexBox}>
             						<View style={styles.detail1}>
@@ -49,6 +50,7 @@ const HighFidelityChekout = () => {
       			<View style={[styles.iphone, styles.iphonePosition]}>
         				<View style={[styles.homeIndicator, styles.cartViewPosition]} />
       			</View>
+				<Navbar/>
     		</View>);
 };
 

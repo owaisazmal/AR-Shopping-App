@@ -30,13 +30,13 @@ const SignIn = () => {
           					<View style={[styles.button1, styles.buttonLayout]}>
             						<View style={[styles.label1, styles.labelPosition]}>
               							<GoogleIcon style={[styles.logoIcon, styles.logoIconLayout]} width={20} height={20} />
-              							<Link href = "/(tabs)/home"><Text style={[styles.continueWithGoogle, styles.continueTypo]}>Continue with Google</Text></Link>
+              							<Link href = "./home"><Text style={[styles.continueWithGoogle, styles.continueTypo]}>Continue with Google</Text></Link>
             						</View>
           					</View>
           					<View style={[styles.button2, styles.buttonLayout]}>
             						<View style={[styles.label2, styles.labelPosition]}>
               							<Image style={styles.logoIconLayout} resizeMode="cover" source={require("../assets/Apple.png")}/>
-              							<Link href = "/(tabs)/home"> <Text style={[styles.continueWithGoogle, styles.continueTypo]}>Continue with Apple</Text></Link>
+              							<Link href = "./home"> <Text style={[styles.continueWithGoogle, styles.continueTypo]}>Continue with Apple</Text></Link>
             						</View>
           					</View>
         				</View>

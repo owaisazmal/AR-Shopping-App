@@ -1,24 +1,20 @@
 import * as React from "react";
 import {Image, StyleSheet, Text, View} from "react-native";
 
-import Star from "../../assets/star.svg"
-import Dress from "../../assets/dress.svg"
-import Tshirt from "../../assets/tshirt.svg"
-import Jeans from "../../assets/Jeans.svg"
-import Defaulticon4 from "../../assets/Defaulticon4.svg"
-import Defaulticon5 from "../../assets/Defaulticon5.svg"
-import AllItems from "../../assets/allItems.svg"
-import Home from "../../assets/Home.svg"
-import Cart from "../../assets/Cart.svg"
-import Favorite from "../../assets/Favorite.svg"
-import Account from "../../assets/Account.svg"
-import dot from "../../assets/dot.svg"
+import Star from "../assets/star.svg"
+import Dress from "../assets/dress.svg"
+import Tshirt from "../assets/tshirt.svg"
+import Jeans from "../assets/Jeans.svg"
+import Defaulticon4 from "../assets/Defaulticon4.svg"
+import Defaulticon5 from "../assets/Defaulticon5.svg"
+import AllItems from "../assets/allItems.svg"
+import Navbar from "./components/navbar";
 
 const HighFidelityHome = () => {
   	return (
     		<View style={styles.highFidelityHome}>
       			<View style={styles.product4}>
-        				<Image style={[styles.imageIcon, styles.imageIconLayout]} width={155} height={251} source={require("../../assets/image3.png")} />
+        				<Image style={[styles.imageIcon, styles.imageIconLayout]} width={155} height={251} source={require("../assets/image3.png")} />
         				<View style={styles.text}>
           					<View style={styles.text1}>
             						<Text style={[styles.lightDressYellow, styles.albertStevanoClr]}>Light Dress Yellow</Text>
@@ -34,7 +30,7 @@ const HighFidelityHome = () => {
         				</View>
       			</View>
       			<View style={styles.product3} >
-        				<Image  style={[styles.imageIcon1, styles.imageIconLayout]} width={155} height={217} source={require("../../assets/image2.png")} />
+        				<Image  style={[styles.imageIcon1, styles.imageIconLayout]} width={155} height={217} source={require("../assets/image2.png")} />
         				<View style={styles.text}>
           					<View style={styles.text1}>
             						<Text style={[styles.lightDressYellow, styles.albertStevanoClr]}>Maroon Dark Top</Text>
@@ -51,7 +47,7 @@ const HighFidelityHome = () => {
       			</View>
       			<View style={styles.shadow} />
       			<View style={[styles.product2, styles.productPosition]} >
-        				<Image width={155} height={251} source={require("../../assets/image1.png")} />
+        				<Image width={155} height={251} source={require("../assets/image1.png")} />
         				<View style={styles.text}>
           					<View style={styles.text1}>
             						<Text style={[styles.lightDressYellow, styles.albertStevanoClr]}>Light Dress Bless</Text>
@@ -67,7 +63,7 @@ const HighFidelityHome = () => {
         				</View>
       			</View>
       			<View style={[styles.product1, styles.productPosition]} >
-        				<Image  source = {require("../../assets/image4.png")} width={155} height={217} />
+        				<Image  source = {require("../assets/image4.png")} width={155} height={217} />
         				<View style={styles.text}>
           					<View style={styles.text1}>
             						<Text style={[styles.lightDressYellow, styles.albertStevanoClr]}>Modern Light Clothes</Text>
@@ -119,14 +115,9 @@ const HighFidelityHome = () => {
           					<Text style={[styles.helloWelcome, styles.text3Typo]}>Hello, Welcome 👋</Text>
           					<Text style={[styles.albertStevano, styles.albertStevanoClr]}>Albert Stevano</Text>
         				</View>
-        				<Image source = {require("../../assets/profile.png")} style={[styles.profileIcon, styles.iconLayout]} resizeMode="cover"  />
+        				<Image source = {require("../assets/profile.png")} style={[styles.profileIcon, styles.iconLayout]} resizeMode="cover"  />
       			</View>
-      			<View /*style={[styles.bottomNavigation, styles.searchSpaceBlock]} */ >
-					{/* <Home style={[styles.homeIcon, styles.iconLayout]} width={40} height={40} />
-        				<Cart width={40} height={40} />
-        				<Favorite width={40} height={40} />
-        				<Account width={40} height={40} />*/}
-      			</View>
+				<Navbar/>
     		</View>);
 };
 

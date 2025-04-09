@@ -29,6 +29,10 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false ,headerBackButtonDisplayMode: "minimal"}} />
+        <Stack.Screen name="home" options={{ headerShown: false ,headerBackButtonDisplayMode: "minimal"}} />
+        <Stack.Screen name="details" options={{ headerShown: false ,headerBackButtonDisplayMode: "minimal"}} />
+        <Stack.Screen name="ar" options={{ headerShown: false ,headerBackButtonDisplayMode: "minimal"}} />
+        <Stack.Screen name="saved" options={{ headerShown: false ,headerBackButtonDisplayMode: "minimal"}} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
