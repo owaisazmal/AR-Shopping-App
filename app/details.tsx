@@ -1,5 +1,6 @@
 import * as React from "react";
-import {Image, StyleSheet, View, Text} from "react-native";
+import {Image, StyleSheet, View, Text, ScrollView} from "react-native";
+import { Link } from 'expo-router';
 import Heart from "../assets/Favorite.svg"
 import Review from "../assets/star.svg"
 import GoBack from "../assets/backArrow.svg"
@@ -8,47 +9,50 @@ import Navbar from "./components/Navbar";
 const HighFidelityDetail = () => {
   	return (
     		<View style={styles.highFidelityDetail}>
-      			<View style={[styles.imagePreview, styles.imagePreviewPosition]}>
-        				<View style={styles.imagePreview1}>
-          					<Image style={[styles.product2Icon, styles.imagePreviewPosition]} resizeMode="cover" source= {require("../assets/product2.jpg")} />
-          					<View style={[styles.back, styles.backShadowBox]}>
-            						<GoBack style={styles.iconLayout} />
-          					</View>
-          					<View style={[styles.heart, styles.backShadowBox]}>
-            						<Heart style={styles.iconLayout} width={24} height={24} />
-          					</View>
-        				</View>
-      			</View>
-      			<View style={styles.detail}>
-        				<View style={styles.detail1}>
-          					<View style={styles.text}>
-            						<View style={styles.text1}>
-              							<Text style={styles.dress1}>DRESS 1</Text>
-              							<Review style={styles.reviewIcon} width={18} height={18} />
-            						</View>
-          					</View>
-          					<Text style={styles.description}>Dress from Gucci Limited edition Grailed</Text>
-        				</View>
-        				<View style={[styles.component1, styles.component1Layout]}>
-          					<View style={styles.childShadowBox} />
-          					<Text style={[styles.tryOnIn, styles.tryOnInTypo]}>TRY ON IN AR</Text>
-        				</View>
-        				<View style={[styles.rectangleParent, styles.component1Layout]}>
-          					<View style={styles.childShadowBox} />
-          					<Text style={[styles.visitProduct, styles.tryOnInTypo]}>VISIT PRODUCT</Text>
-        				</View>
-						<Navbar/>
-      			</View>
+      			<ScrollView contentContainerStyle={styles.scrollContent} contentOffset={{ x: 0, y: 0 }}>
+        			<View style={styles.imagePreview}>
+          				<Image style={styles.product2Icon} resizeMode="cover" source={require("../assets/product2.jpg")} />
+          				<View style={[styles.back, styles.backShadowBox]}>
+            					<GoBack style={styles.iconLayout} />
+          				</View>
+          				<View style={[styles.heart, styles.backShadowBox]}>
+            					<Heart style={styles.iconLayout} width={24} height={24} />
+          				</View>
+        			</View>
+        			<View style={styles.detail}>
+          				<View style={styles.detail1}>
+            				<View style={styles.text}>
+              					<View style={styles.text1}>
+                					<Text style={styles.dress1}>DRESS 1</Text>
+                					<Review style={styles.reviewIcon} width={18} height={18} />
+              					</View>
+            				</View>
+            				<Text style={styles.description}>Dress from Gucci Limited edition Grailed</Text>
+          				</View>
+          				<Link href="/ar">
+            				<View style={[styles.component1, styles.component1Layout]}>
+              					<View style={styles.childShadowBox} />
+              					<Text style={[styles.tryOnIn, styles.tryOnInTypo]}>TRY ON IN AR</Text>
+            				</View>
+          				</Link>
+          				<View style={[styles.rectangleParent, styles.component1Layout]}>
+            				<View style={styles.childShadowBox} />
+            				<Text style={[styles.visitProduct, styles.tryOnInTypo]}>VISIT PRODUCT</Text>
+            			</View>
+        			</View>
+      			</ScrollView>
+      			<Navbar/>
     		</View>);
 };
 
 const styles = StyleSheet.create({
+  	scrollContent: {
+    		flexGrow: 1,
+    		paddingTop: 20,
+  	},
   	imagePreviewPosition: {
-    		width: 375,
-    		left: "50%",
-    		top: 0,
-    		marginLeft: -187.5,
-    		position: "absolute"
+    		width: '100%',
+    		position: 'relative',
   	},
   	backShadowBox: {
     		padding: 8,
@@ -69,21 +73,20 @@ const styles = StyleSheet.create({
   	component1Layout: {
     		height: 58,
     		width: 327,
-    		left: 24,
-    		position: "absolute"
+    		marginHorizontal: 24,
+    		marginTop: 16,
   	},
   	tryOnInTypo: {
     		color: "#000",
     		lineHeight: 42,
     		fontSize: 28,
-    		top: "13.79%",
     		textAlign: "left",
     		fontFamily: "EncodeSans-SemiBold",
     		fontWeight: "600",
-    		position: "absolute"
   	},
   	product2Icon: {
-    		height: 439
+    		width: '100%',
+    		height: 439,
   	},
   	iconLayout: {},
   	back: {
@@ -93,25 +96,15 @@ const styles = StyleSheet.create({
     		right: 16,
     		overflow: "hidden"
   	},
-  	imagePreview1: {
-    		top: 68,
-    		borderRadius: 16,
-    		height: 392,
-    		width: 327,
-    		left: 24,
-    		position: "absolute",
-    		overflow: "hidden"
-  	},
   	imagePreview: {
-    		height: 424,
-    		overflow: "hidden"
+    		borderRadius: 16,
+    		overflow: "hidden",
+    		position: 'relative',
   	},
   	dress1: {
     		fontSize: 24,
     		lineHeight: 31,
     		color: "#121111",
-    		width: 195,
-    		height: 32,
     		textAlign: "left",
     		fontFamily: "EncodeSans-SemiBold",
     		fontWeight: "600"
@@ -133,10 +126,9 @@ const styles = StyleSheet.create({
     		textAlign: "left"
   	},
   	detail1: {
-    		top: 24,
+    		marginTop: 24,
     		gap: 16,
-    		left: 24,
-    		position: "absolute"
+    		marginHorizontal: 24,
   	},
   	childShadowBox: {
     		opacity: 0.7,
@@ -148,10 +140,6 @@ const styles = StyleSheet.create({
     		elevation: 4,
     		shadowRadius: 4,
     		shadowColor: "rgba(0, 0, 0, 0.25)",
-    		left: "0%",
-    		bottom: "0%",
-    		right: "0%",
-    		top: "0%",
     		height: "100%",
     		shadowOpacity: 1,
     		shadowOffset: {
@@ -162,33 +150,29 @@ const styles = StyleSheet.create({
     		width: "100%"
   	},
   	tryOnIn: {
-    		left: "21.71%"
+    		position: "absolute",
+    		left: "21.71%",
+    		top: "13.79%"
   	},
   	component1: {
-    		top: 266
+    		marginTop: 266
   	},
   	visitProduct: {
-    		left: "18.04%"
+    		position: "absolute",
+    		left: "18.04%",
+    		top: "13.79%"
   	},
   	rectangleParent: {
-    		top: 176
+    		marginTop: 176
   	},
   	detail: {
-    		bottom: 36,
-    		height: 352,
     		backgroundColor: "#fdfdfd",
-    		width: 375,
-    		left: "50%",
-    		marginLeft: -187.5,
-    		position: "absolute",
-    		overflow: "hidden"
+    		width: "100%",
+    		paddingBottom: 36,
   	},
   	highFidelityDetail: {
     		backgroundColor: "#fff",
     		flex: 1,
-    		height: 812,
-    		overflow: "hidden",
-    		width: "100%"
   	}
 });
 
