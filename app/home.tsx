@@ -10,9 +10,11 @@ import Product from "./components/Product"
 import Navbar from "./components/Navbar"
 
 
+
 const HighFidelityHome = () => {
   	return (
     		<View style={styles.highFidelityHome}>
+
 
 
       			<View style={[styles.category, styles.categoryPosition]}>
@@ -33,6 +35,7 @@ const HighFidelityHome = () => {
           					<Text style={[styles.dress2, styles.dress2Typo]}>Jeans</Text>
         				</View>
       			</View>
+				<Product/>
 				<Product/>
 
       			<View style={[styles.searchBar, styles.categoryPosition]}  >
