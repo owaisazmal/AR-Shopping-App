@@ -107,44 +107,10 @@ import Star from "../../assets/star.svg"
   	productPosition: {
     		top: 268,
     		gap: 8,
+			
     		position: "absolute"
   	},
-  	categoryPosition: {
-    		gap: 16,
-    		left: 24,
-    		alignItems: "center",
-    		flexDirection: "row",
-    		position: "absolute"
-  	},
-  	dress1SpaceBlock: {
-    		paddingVertical: 8,
-    		paddingHorizontal: 12,
-    		flexDirection: "row",
-    		gap: 4
-  	},
-  	dress2Typo: {
-    		fontFamily: "EncodeSans-Medium",
-    		fontWeight: "500",
-    		lineHeight: 18,
-    		fontSize: 12,
-    		textAlign: "left"
-  	},
-  	dress1Border: {
-    		borderWidth: 1,
-    		borderColor: "#dfdede",
-    		borderStyle: "solid",
-    		borderRadius: 8,
-    		alignItems: "center"
-  	},
-  	searchSpaceBlock: {
-    		paddingHorizontal: 16,
-    		flexDirection: "row"
-  	},
-  	filterLayout: {
-    		borderRadius: 8,
-    		backgroundColor: "#292526",
-    		alignItems: "center"
-  	},
+
   	iconLayout: {
     		borderRadius: 100,
     		overflow: "hidden"
@@ -212,99 +178,7 @@ import Star from "../../assets/star.svg"
   	product1: {
     		left: 24
   	},
-  	defaultIcon4: {},
-  	allItems1: {
-    		color: "#fdfdfd"
-  	},
-  	allItems: {
-    		backgroundColor: "#292526",
-    		borderRadius: 8,
-    		alignItems: "center"
-  	},
-  	dress2: {
-    		color: "#292526"
-  	},
-  	dress1: {
-    		paddingVertical: 8,
-    		paddingHorizontal: 12,
-    		flexDirection: "row",
-    		gap: 4
-  	},
-  	category: {
-    		top: 210,
-    		width: 327,
-    		overflow: "hidden"
-  	},
-  	mainIcon: {},
-  	searchClothes: {
-    		color: "#cac9c9",
-    		width: 105,
-    		height: 20,
-    		lineHeight: 21,
-    		fontSize: 14,
-    		fontFamily: "EncodeSans-Regular"
-  	},
-  	search: {
-    		width: 263,
-    		paddingVertical: 14,
-    		borderWidth: 1,
-    		borderColor: "#dfdede",
-    		borderStyle: "solid",
-    		borderRadius: 8,
-    		alignItems: "center",
-    		gap: 8
-  	},
-  	filterIcon: {
-    		overflow: "hidden"
-  	},
-  	filter: {
-    		justifyContent: "center",
-    		padding: 12,
-    		backgroundColor: "#292526",
-    		flexDirection: "row",
-    		borderRadius: 8
-  	},
-  	searchBar: {
-    		top: 130
-  	},
-  	helloWelcome: {
-    		color: "#787676"
-  	},
-  	albertStevano: {
-    		fontSize: 16,
-    		lineHeight: 24,
-    		fontWeight: "700",
-    		fontFamily: "EncodeSans-Bold",
-    		textAlign: "left"
-  	},
-  	profileIcon: {
-    		width: 32,
-    		height: 32
-  	},
-  	customer: {
-    		top: 68,
-    		gap: 180,
-    		left: 24,
-    		position: "absolute"
-  	},
-  	homeIcon: {},
-  	bottomNavigation: {
-    		marginLeft: -163.5,
-    		bottom: 32,
-    		left: "50%",
-    		borderRadius: 44,
-    		paddingVertical: 10,
-    		gap: 45,
-    		backgroundColor: "#292526",
-    		position: "absolute"
-  	},
-  	highFidelityHome: {
-    		flex: 1,
-    		width: "100%",
-    		height: 812,
-    		overflow: "hidden",
-    		backgroundColor: "#fff"
-  	}
+
 });
 
 export default Product;

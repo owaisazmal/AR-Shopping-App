@@ -6,8 +6,9 @@ import Jeans from "../assets/Jeans.svg"
 import Defaulticon4 from "../assets/Defaulticon4.svg"
 import Defaulticon5 from "../assets/Defaulticon5.svg"
 import AllItems from "../assets/allItems.svg"
-import Product from "./components/Product"
+import Product from "./components/ProductList"
 import Navbar from "./components/Navbar"
+import ProductList from "./components/ProductList";
 
 
 
@@ -35,8 +36,7 @@ const HighFidelityHome = () => {
           					<Text style={[styles.dress2, styles.dress2Typo]}>Jeans</Text>
         				</View>
       			</View>
-				<Product/>
-				<Product/>
+				<ProductList/>
 
       			<View style={[styles.searchBar, styles.categoryPosition]}  >
         				<View style={[styles.search, styles.searchSpaceBlock]}>
@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
   	},
   	category: {
     		top: 210,
-    		width: 327,
+    		width: 340,
     		overflow: "hidden"
   	},
   	mainIcon: {},
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     		fontFamily: "EncodeSans-Regular"
   	},
   	search: {
-    		width: 263,
+    		width: 280,
     		paddingVertical: 14,
     		borderWidth: 1,
     		borderColor: "#dfdede",

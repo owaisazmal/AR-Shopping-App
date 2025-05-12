@@ -1,0 +1,60 @@
+
+export default [
+  {
+    id: "1",
+    name: "Light Dress Yellow",
+    type: "Dress Modern",
+    price: 122.99,
+    rating: 5.0,
+    image: require('../assets/image3.png'),
+  },
+  {
+    id: "2",
+    name: "Maroon Dark Top",
+    type: "Dress",
+    price: 194.99,
+    rating: 5.0,
+    image: require('../assets/image2.png'),
+  },
+  {
+    id: "3",
+    name: "Light Dress Bless",
+    type: "Dress modern",
+    price: 162.99,
+    rating: 5.0,
+    image: require('../assets/image1.png'),
+  },
+  {
+    id: "4",
+    name: "Modern Light Clothes",
+    type: "T-Shirt",
+    price: 212.99,
+    rating: 5.0,
+    image: require('../assets/image4.png'),
+  },
+  {
+    id: "5",
+    name: "Modern Light Clothes",
+    type: "T-Shirt",
+    price: 212.99,
+    rating: 5.0,
+    image: require('../assets/image4.png'),
+  },
+  {
+    id: "5",
+    name: "Modern Light Clothes",
+    type: "T-Shirt",
+    price: 212.99,
+    rating: 5.0,
+    image: require('../assets/image4.png'),
+  },
+  {
+    id: "6",
+    name: "Modern Light Clothes",
+    type: "T-Shirt",
+    price: 212.99,
+    rating: 5.0,
+    image: require('../assets/image4.png'),
+  },
+];
+
