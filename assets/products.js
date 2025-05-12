@@ -15,6 +15,7 @@ export default [
     price: 194.99,
     rating: 5.0,
     image: require('../assets/image2.png'),
+    
   },
   {
     id: "3",

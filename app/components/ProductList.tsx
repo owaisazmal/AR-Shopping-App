@@ -24,7 +24,7 @@ const Product = ({ p}) => (
 //creates list of products
 const ProductList = () => {
 	return(
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
       <View style={styles.grid}>
         {products.map((p) => (
           <Product key={p.id} p={p} />
@@ -35,7 +35,7 @@ const ProductList = () => {
 ;} 
 const styles = StyleSheet.create({
   card: {
-    width: 155,
+    width: 130,
     margin: 8,
     borderRadius: 12,
     backgroundColor: "#fff",
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "space-between",
     padding: 8,
   },
@@ -82,21 +82,19 @@ const styles = StyleSheet.create({
   },
 
   container: {
-	top: 268, // top, gap and position added to ensure is below search
-	gap: 8,
-	alignItems: "center",
-	flexDirection: "row",
-	position: "absolute", 
+    gap: 0,
+    alignItems: "center",
+    flexDirection: "row",
     padding: 16,
-	justifyContent: "space-between",
-	flexWrap: "wrap",
-	position: "absolute", 
+    justifyContent: "flex-start",
+    flexWrap: "wrap",
+    position: "absolute", 
   },
   grid: {
     flexDirection: "row",
     flexWrap: "wrap", 
-    justifyContent: "space-between",
-	width: 360,
+    justifyContent: "flex-start",
+	  width: "100%",
     marginBottom: 16,
   },
 });
