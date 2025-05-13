@@ -10,7 +10,6 @@ import Search from "../assets/Search.svg"
 import Navbar from "./components/Navbar"
 import ProductList from "./components/ProductList";
 
-
 const HighFidelityHome = () => {
   	return (
     		<View style={styles.highFidelityHome}>
@@ -55,7 +54,8 @@ const HighFidelityHome = () => {
 				</View>
 				<ProductList/>
 				<Navbar/>
-    		</View>);
+    		</View>
+			);
 };
 
 const styles = StyleSheet.create({

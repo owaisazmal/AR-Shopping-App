@@ -21,6 +21,8 @@ const Product = ({ p}) => (
     </View>
   </View>
 );
+
+
 //creates list of products
 const ProductList = () => {
 	return(
